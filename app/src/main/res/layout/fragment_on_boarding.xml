@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.start.OnBoardingFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Onboarding Screen"
+        android:layout_marginBottom="100dp"
+        android:textSize="40sp"/>
+
+    <Button
+        android:id="@+id/btnMove"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:textColor="@color/white"
+        android:text="LOGIN"
+        android:layout_gravity="center"/>
+
+</FrameLayout>

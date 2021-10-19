@@ -20,6 +20,8 @@ class ProfileFragment : Fragment() {
         binding = FragmentProfileBinding.inflate(inflater, container, false)
         (requireActivity() as MainActivity).showBottomNavigationBar()
 
+
+
         binding?.btnMove?.setOnClickListener {
             val action = ProfileFragmentDirections.actionProfileFragmentToLoginFragment()
             it.findNavController().navigate(action)

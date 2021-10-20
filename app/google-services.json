@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "118293440614",
+    "project_id": "bagzz-e0309",
+    "storage_bucket": "bagzz-e0309.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118293440614:android:3a0f44afa543a15b49a5a7",
+        "android_client_info": {
+          "package_name": "com.android.cantasepeti"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "118293440614-4pgsqtnauvqtevf3r468jfug0j3o93r9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGHGCyzhAtdlxvq2EcAaT53C6jC2ORHqk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "118293440614-4pgsqtnauvqtevf3r468jfug0j3o93r9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

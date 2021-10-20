@@ -7,31 +7,41 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.cantasepeti.R
+import com.android.cantasepeti.adapter.ProductAdapter
 import com.android.cantasepeti.databinding.FragmentHomeBinding
+import com.android.cantasepeti.entity.Product
 import com.android.cantasepeti.view.MainActivity
+import com.google.firebase.firestore.FirebaseFirestore
 
 class HomeFragment : Fragment() {
 
-    private var binding : FragmentHomeBinding? = null
+     var binding : FragmentHomeBinding? = null
+    private var firestore: FirebaseFirestore? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = FragmentHomeBinding.inflate(inflater, container, false)
-        (requireActivity() as MainActivity).showBottomNavigationBar()
+
+        binding =  DataBindingUtil.inflate(inflater,R.layout.fragment_home, container, false)
+
+
 
         binding?.buttonNext?.setOnClickListener {
             binding?.imageViewCard?.setImageResource(R.drawable.image_two)
         }
-         startSlider()
 
+        startSlider()
+        initProducts()
+        bindQuestions()
 
         binding?.btnMove?.setOnClickListener {
             val action = HomeFragmentDirections.actionHomeFragmentToDetailFragment()
             it.findNavController().navigate(action)
         }
 
-        val reycler_view = binding?.listRecyclerView
+        firestore = FirebaseFirestore.getInstance()
 
         return binding?.root
     }
@@ -53,5 +63,20 @@ class HomeFragment : Fragment() {
             postDelayed(runnable, 1000)
         }
     }
+
+    private fun initProducts(){
+        binding?.listRecyclerView?.layoutManager = LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false)
+    }
+
+    private fun bindQuestions(){
+       firestore?.collection("products")?.get()?.addOnSuccessListener{ snapshot ->
+           snapshot.toObjects(Product::class.java)?.let { products ->
+               binding?.listRecyclerView?.adapter = ProductAdapter(products as ArrayList<Product>)
+           }
+
+
+       }
+    }
+
 
 }

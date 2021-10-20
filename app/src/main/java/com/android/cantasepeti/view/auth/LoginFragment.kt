@@ -20,7 +20,7 @@ class LoginFragment : Fragment() {
         binding = FragmentLoginBinding.inflate(inflater, container, false)
         (requireActivity() as MainActivity).hideBottomNavigationBar()
 
-        binding?.btnMove?.setOnClickListener {
+        binding?.createAccount?.setOnClickListener {
             val action = LoginFragmentDirections.actionLoginFragmentToRegisterFragment()
             it.findNavController().navigate(action)
         }

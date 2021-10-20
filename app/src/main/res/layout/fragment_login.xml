@@ -1,25 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.auth.LoginFragment">
+    tools:context=".view.auth.LoginFragment"
+    android:background="@drawable/canta_sepeti_icon"
+    android:orientation="vertical">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Login Screen"
-        android:layout_marginBottom="100dp"
-        android:textSize="40sp"/>
+        android:text="Çanta Sepeti"
+        android:textColor="@color/white"
+        android:layout_marginTop="60dp"
+        android:textSize="40sp"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:background="@drawable/rectangle"
+        android:hint="Username"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        />
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:background="@drawable/rectangle"
+        android:hint="Password"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        />
+
+
 
     <Button
         android:id="@+id/btnMove"
+        android:layout_marginTop="80dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="40dp"
         android:textColor="@color/white"
-        android:text="REGISTER"
+        android:text="LOGIN"
+        android:backgroundTint="#F44336"
         android:layout_gravity="center"/>
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/createAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Don't have an account?"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+         />
+
+</LinearLayout>

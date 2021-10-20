@@ -20,10 +20,17 @@ class RegisterFragment : Fragment() {
         binding = FragmentRegisterBinding.inflate(inflater, container, false)
         (requireActivity() as MainActivity).hideBottomNavigationBar()
 
-        binding?.btnMove?.setOnClickListener {
-            val action = RegisterFragmentDirections.actionRegisterFragmentToHomeFragment()
+        binding?.haveAccount?.setOnClickListener {
+            val action = RegisterFragmentDirections.actionRegisterFragmentToLoginFragment()
+            it.findNavController().navigate(action)
+
+        }
+        binding?.btnRegister?.setOnClickListener {
+            val action = RegisterFragmentDirections.actionRegisterFragmentToLoginFragment()
             it.findNavController().navigate(action)
         }
+
+
 
         return binding?.root
     }

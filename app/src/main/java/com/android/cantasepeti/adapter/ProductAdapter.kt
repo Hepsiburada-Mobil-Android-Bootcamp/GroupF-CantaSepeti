@@ -13,7 +13,7 @@ class ProductAdapter(private val listProduct:ArrayList<Product>) :RecyclerView.A
     inner class ProductViewHolder(private val binding:ItemCardDesignBinding):RecyclerView.ViewHolder(binding.root){
 
         fun bind(product: Product) {
-            // olmadı viewbinding problem olabilir
+           binding.product = product
         }
 
     }

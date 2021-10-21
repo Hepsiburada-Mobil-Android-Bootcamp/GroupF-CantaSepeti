@@ -4,4 +4,19 @@
     <string name="bagzz">bagzz</string>
     <string name="artsy">Artsy</string>
     <string name="shop_now">SHOP NOW</string>
+    <string name="splash">splash</string>
+
+
+    <string name="onboarding_slide1_subtitle">Explore many products</string>
+    <string name="onboarding_slide1_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+
+    <string name="onboarding_slide2_subtitle">Choose and checkout</string>
+    <string name="onboarding_slide2_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+
+    <string name="onboarding_slide3_subtitle">Get it delivered</string>
+    <string name="onboarding_slide3_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="get_started">Get started</string>
 </resources>

@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.start.SplashFragment">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Splash Screen"
-        android:layout_marginBottom="100dp"
-        android:textSize="40sp"/>
-
-    <Button
-        android:id="@+id/btnMove"
+        android:id="@+id/splashTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="40dp"
-        android:textColor="@color/white"
-        android:text="ONBOARDING"
-        android:layout_gravity="center"/>
+        android:layout_marginTop="100dp"
+        android:fontFamily='@font/playfair_display_bold'
+        android:gravity="center"
+        android:padding="30dp"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/splash"
+        android:contentDescription="@string/splash"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

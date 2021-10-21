@@ -26,6 +26,9 @@ class HomeFragment : Fragment() {
     private var firestore: FirebaseFirestore? = null
 
 
+    init {
+        firestore = FirebaseFirestore.getInstance()
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
@@ -56,7 +59,7 @@ class HomeFragment : Fragment() {
 
  */
 
-        firestore = FirebaseFirestore.getInstance()
+
 
         return binding?.root
     }
@@ -86,13 +89,13 @@ class HomeFragment : Fragment() {
  */
 
     private fun bindProducts(){
-       firestore?.collection("product")?.get()?.addOnSuccessListener{ snapshot ->
-           snapshot.toObjects(Product::class.java)?.let { products ->
-               binding?.listRecyclerView?.adapter = ProductAdapter(products as ArrayList<Product>)
-           }
+        firestore!!.collection("product").get().addOnSuccessListener{ snapshot ->
+            snapshot.toObjects(Product::class.java)?.let { products ->
+                binding?.listRecyclerView?.adapter = ProductAdapter(products as ArrayList<Product>)
+            }
 
 
-       }
+        }
     }
 
 

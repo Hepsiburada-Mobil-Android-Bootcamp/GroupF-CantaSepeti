@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/splashFragment">
+    app:startDestination="@id/homeFragment">
 
 
     <fragment
@@ -35,6 +35,9 @@
         <action
             android:id="@+id/action_homeFragment_to_favouritesFragment"
             app:destination="@id/favouritesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_addNewProductFragment"
+            app:destination="@id/addNewProductFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -59,7 +62,7 @@
     </fragment>
     <fragment
         android:id="@+id/onBoardingFragment"
-        android:name="com.android.cantasepeti.view.start.OnBoardingFragment"
+        android:name="com.android.cantasepeti.view.start.onBoarding.OnBoardingFragment"
         android:label="Onboarding"
         tools:layout="@layout/fragment_on_boarding" >
         <action
@@ -86,5 +89,13 @@
         <action
             android:id="@+id/action_splashFragment_to_onBoardingFragment"
             app:destination="@id/onBoardingFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/addNewProductFragment"
+        android:name="com.android.cantasepeti.view.tabs.AddNewProductFragment"
+        android:label="AddNewProductFragment" >
+
+
     </fragment>
 </navigation>

@@ -19,10 +19,11 @@
         />
 
     <EditText
+        android:id="@+id/loginUsername"
         android:layout_width="350dp"
         android:layout_height="70dp"
         android:background="@drawable/rectangle"
-        android:hint="Username"
+        android:hint="E-mail"
         android:backgroundTint="@color/white"
         android:layout_marginTop="200dp"
         android:gravity="center"
@@ -30,6 +31,7 @@
         />
 
     <EditText
+        android:id="@+id/loginPassword"
         android:layout_width="350dp"
         android:layout_height="70dp"
         android:background="@drawable/rectangle"
@@ -38,12 +40,13 @@
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:layout_gravity="center"
+        android:inputType="textPassword"
         />
 
 
 
     <Button
-        android:id="@+id/btnMove"
+        android:id="@+id/btnLogin"
         android:layout_marginTop="80dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

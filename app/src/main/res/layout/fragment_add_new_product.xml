@@ -12,37 +12,61 @@
 
         <EditText
             android:id="@+id/product_name"
-            android:layout_width="224dp"
-            android:layout_height="65dp"
-            android:layout_marginTop="329dp"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/rectangle"
             android:backgroundTint="@color/white"
-            android:ems="10"
-            android:inputType="textPersonName"
+            android:gravity="center"
+            android:hint="Bag Name"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/product_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="464dp"
-            android:backgroundTint="#D8B3B3"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_save"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="63dp"
-            android:text="Button"
+            android:layout_width="360dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="111dp"
+            android:background="@color/colorBlueMidnight"
+            android:text="SAVE"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_upload" />
+
+        <ImageView
+            android:id="@+id/product_image"
+            android:layout_width="153dp"
+            android:layout_height="141dp"
+            android:layout_marginTop="56dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.542"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_name" />
+
+        <Button
+            android:id="@+id/button_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="20dp"
+            android:text="select image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_image" />
+
+        <Button
+            android:id="@+id/button_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:text="upload image"
+            app:layout_constraintStart_toEndOf="@+id/button_select"
             app:layout_constraintTop_toBottomOf="@+id/product_image" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

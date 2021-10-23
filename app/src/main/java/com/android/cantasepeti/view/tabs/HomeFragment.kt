@@ -1,5 +1,7 @@
 package com.android.cantasepeti.view.tabs
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -22,7 +24,8 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class HomeFragment : Fragment() {
 
-     var binding : FragmentHomeBinding? = null
+
+    var binding : FragmentHomeBinding? = null
     private var firestore: FirebaseFirestore? = null
 
 
@@ -35,9 +38,15 @@ class HomeFragment : Fragment() {
 
         binding =  DataBindingUtil.inflate(inflater,R.layout.fragment_home, container, false)
 
-        binding?.floatingActionButton?.setOnClickListener {
+        binding?.imageViewAdd?.setOnClickListener {
             val action = HomeFragmentDirections.actionHomeFragmentToAddNewProductFragment()
             it.findNavController().navigate(action)
+        }
+
+
+
+        binding?.floatingActionButton?.setOnClickListener {
+
         }
 
         binding?.buttonNext?.setOnClickListener {
@@ -46,23 +55,17 @@ class HomeFragment : Fragment() {
 
 
 
+
+
         startSlider()
         bindProducts()
-       // initProducts()
-
-
-/*
-        binding?.btnMove?.setOnClickListener {
-            val action = HomeFragmentDirections.actionHomeFragmentToDetailFragment()
-            it.findNavController().navigate(action)
-        }
-
- */
 
 
 
         return binding?.root
     }
+
+
     private fun startSlider() {
         val loopImages = listOf(R.drawable.imagecard, R.drawable.image_two)
         Handler().apply {
@@ -81,12 +84,7 @@ class HomeFragment : Fragment() {
             postDelayed(runnable, 1000)
         }
     }
-/*
-    private fun initProducts(){
-        binding?.listRecyclerView?.layoutManager = LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false)
-    }
 
- */
 
     private fun bindProducts(){
         firestore!!.collection("product").get().addOnSuccessListener{ snapshot ->
@@ -97,6 +95,8 @@ class HomeFragment : Fragment() {
 
         }
     }
+
+
 
 
 

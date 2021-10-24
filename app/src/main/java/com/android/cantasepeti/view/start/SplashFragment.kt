@@ -32,13 +32,13 @@ class SplashFragment : Fragment() {
         binding?.splashTitle?.startAnimation(AnimationUtils.loadAnimation(context, R.anim.slide))
         binding?.splash?.let { Glide.with(this).asGif().load(R.raw.bag).into(it) }
         Handler(Looper.getMainLooper()).postDelayed({
-//            if (prefManager?.isFirstTimeLaunch == false) {
-//                val action = SplashFragmentDirections.actionSplashFragmentToLoginFragment()
-//                view?.findNavController()?.navigate(action)
-//            } else {
+            if (prefManager?.isFirstTimeLaunch == false) {
+                val action = SplashFragmentDirections.actionSplashFragmentToLoginFragment()
+                view?.findNavController()?.navigate(action)
+            } else {
                 val action = SplashFragmentDirections.actionSplashFragmentToOnBoardingFragment()
                 binding?.root?.findNavController()?.navigate(action)
-//            }
+            }
         }, 4000)
         return binding?.root
 

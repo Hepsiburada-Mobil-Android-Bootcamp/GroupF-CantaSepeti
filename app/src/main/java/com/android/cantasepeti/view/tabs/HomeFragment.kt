@@ -45,9 +45,9 @@ class HomeFragment : Fragment() {
 
 
 
-        binding?.floatingActionButton?.setOnClickListener {
-
-        }
+//        binding?.floatingActionButton?.setOnClickListener {
+//
+//        }
 
         binding?.buttonNext?.setOnClickListener {
             binding?.imageViewCard?.setImageResource(R.drawable.image_two)
